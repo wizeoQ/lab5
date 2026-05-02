@@ -39,3 +39,8 @@ class Visualizer:
         plt.ylabel("Amplitude")
         plt.grid()
         plt.show()
+
+    def save_plot(self, time, signal, filename="signal.png"):
+        plt.plot(time, signal)
+        plt.savefig(filename)
+        plt.close()
