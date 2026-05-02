@@ -11,3 +11,11 @@ class SignalGenerator:
         
     def genetate(self, time):
         return self.amplitude * np.sin(2 * np.pi * self.frequancy * time)
+
+# 5.4.1.2 Класс Modulator
+class Modulator:
+    def __init__(self, carrier_frequancy):
+        self.carrier_frequancy = carrier_frequancy
+    
+    def am_modulate(self, signal, time):
+        carrier = np.sin(2 * np.pi * self.carrier_frequancy * time)
