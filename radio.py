@@ -25,3 +25,8 @@ class Modulator:
     def fm_modulate(self, signal, time, modulation_index=1.0):
         phase = 2 * np.pi * self.carrier_frequancy * time + modulation_index * signal
         return np.sin(phase)
+
+def save_plot(self, time, signal, filename="signal.png"):
+    plt.plot(time, signal)
+    plt.savefig(filename)
+    plt.close()
